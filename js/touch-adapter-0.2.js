@@ -25,7 +25,7 @@
 		return false;
 	};
 
-	var isTouchDevice = "ontouchstart" in document.documentElement,
+	var isTouchDevice = "ontouchstart" in document.documentElement || navigator.maxTouchPoints,
 		downEvent = isTouchDevice ? "touchstart" : "mousedown",
 		upEvent = isTouchDevice ? "touchend" : "mouseup",
 		moveEvent = isTouchDevice ? "touchmove" : "mousemove",

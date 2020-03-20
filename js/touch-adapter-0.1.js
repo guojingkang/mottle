@@ -9,7 +9,7 @@
 */
 ;(function() {
 
-	var isTouchDevice = "ontouchstart" in document.documentElement,
+	var isTouchDevice = "ontouchstart" in document.documentElement || navigator.maxTouchPoints,
 		click = "click", dblclick = "dblclick", mousedown = "mousedown", mouseup = "mouseup", mousemove = "mousemove",
 		touchstart = "touchstart", touchend = "touchend", touchmove = "touchmove", contextmenu = "contextmenu",
 		downEvent = isTouchDevice ? touchstart : mousedown,
